@@ -73,7 +73,7 @@ class App extends Component{
                     
                     <hr />
                     <h2>Arrays here</h2>
-                    <Arrays /> */}
+                    <Arrays /> */}  
             </div>
         );
 
