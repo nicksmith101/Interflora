@@ -1,29 +1,30 @@
 import React, {Component} from 'react';
 
-const TableHeader = () => {
-        return(
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Job</th>
-                    <th>Remove</th>
-                </tr>
-            </thead>
-        );
-    }
+
+    // const TableHeader = () => {
+    //     return(
+    //         <div className="tableheader">
+    //             <div className="tablerow">
+    //                 <div className="tablecell greeting">Greeting</div>
+    //                 <div className="tablecell category">Category</div>
+    //             </div>
+    //         </div>
+    //     );
+    // }
 
 
     const TableBody = (props) => {
 
-        const rowcontents = props.characterData.map( (innerStuff, index) => {
+        const rowcontents = props.entryData.map( (innerStuff, index) => {
             return(
-                <tr key={index} >
-                    <td>{innerStuff.guysname}</td>
-                    <td>{innerStuff.job}</td>
-                    <td>
-                        <button onClick={() => props.removeCharacter(index)}>delete this</button>
-                    </td>
-                </tr>
+                <div className="tablerow" key={index} >
+                    <div className="tablecell greeting">{innerStuff.greeting}</div>
+        
+                    <div className="tablecell category">
+                        <div className="categorytext">{innerStuff.category}</div>
+                        <div className="categorytext"><button className="deletebutton" onClick={() => props.removeEntry(index)}>Delete</button></div>         
+                    </div>
+                </div>
             );
             }
         )
@@ -32,21 +33,22 @@ const TableHeader = () => {
     }
 
 
-
     class Table extends Component {
        
         render() {
  
-        const { characterData, removeCharacter } = this.props;
+        const { entryData, removeEntry } = this.props;
     
             return (
-                <table className="tabletest">
-                    <TableHeader />
+            <div className="tablearea row">
+                <div className="tableofdata  ">
+                    {/* <TableHeader /> */}
                     <TableBody 
-                    characterData={characterData}
-                    removeCharacter={removeCharacter}
+                    entryData={entryData}
+                    removeEntry={removeEntry}
                     />
-                </table>
+               </div>
+            </div>
             );
         }
     }

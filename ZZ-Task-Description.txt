@@ -1,0 +1,16 @@
+Well done on impressing Interflora.
+
+ 
+
+The task is to create a react app which handles the following:
+
+    The user can write a short greeting
+    After having written the greeting the user can do one of two things:
+        Write a category in a separate field
+        Select a matching category from a list of existing categories.
+
+    The user should be able to save the text with the category and once its saves the combination should be visible in a list of saved combinations.
+    The App should be styled according to Interflora’s brand.
+    It must be responsive. 
+
+Upload the task to github and send me the repo.

@@ -2,79 +2,76 @@
 import React, {Component} from 'react';
 import Table from './Table';
 import Form from './Form';
-//import Api from './Api';
-//import Arrays from './Arrays';
-
 
 class App extends Component{
 
     state = {
 
-        characters : [ ]
-
-              /*  characters : [
-                    {
-                           guysname: 'Nick',
-                           job: 'front-end-gnome'
-                       },
-                       {
-                           guysname: 'Dave',
-                           job: 'Cleaner'
-                       },
-                       {
-                           guysname: 'Pete',
-                           job: 'CEO'
-                       },
-                       {
-                           guysname: 'Clement',
-                           job: 'Pope'
-                       } 
-                   ] */
-        
+        entries : [ ]
+       
     };
 
 
-    removeCharacter = (index) => {
+    removeEntry = (index) => {
 
-        const {characters} = this.state;
+        const {entries} = this.state;
 
         this.setState({
-                characters: characters.filter((character, i ) => {
+            entries: entries.filter((entry, i ) => {
                     return i !== index;
                 })
             });
     }
 
-    handleSubmit = (character) => {
+    handleSubmit = (entry) => {
         this.setState( 
-                { characters: [...this.state.characters, character] }
+                { entries: [...this.state.entries, entry] }
         )
     }
 
     render()
     {
-        const { characters } = this.state;
-        //const  characters = this.state.characters;
+        const { entries } = this.state;
+        //const entries = this.state.entries;
+        //console.log('entries', entries)
 
-        //console.log('characters', characters)
+        return (   
 
-        return (
-            <div className="container">
-            <h1 className="title">Title goes here</h1>
-           
-                <Table 
-                    characterData={characters}
-                    removeCharacter={this.removeCharacter}
-                    />
-                <Form  handleSubmit={this.handleSubmit}  />
 
-                    {/* <h2>Api here</h2>
-                    <Api />
-                    
-                    <hr />
-                    <h2>Arrays here</h2>
-                    <Arrays /> */}  
-            </div>
+<div className="container-fluid">
+
+    <div className="row headercontainer">
+        <div className="siteheader"></div>
+        <div className="siteheaderbg"></div>
+    </div>
+
+    <div className="container pagecontent">
+
+                <div className="row titlearea">
+                    <h1 className="title">Customise your Order</h1>
+                </div>
+
+                <div className="row">
+                    <div className="col-md-8 offset-md-2">
+                        <Form handleSubmit={this.handleSubmit}  />
+                    </div>
+                <div>
+
+                <div className="row">
+                    <div className="col-md-8 offset-md-2">
+                        <Table entryData={entries}
+                                removeEntry={this.removeEntry}
+                                />
+                    </div>
+                </div>
+
+            </div>    
+            
+        </div>
+    </div>
+    
+</div>
+
         );
 
     }

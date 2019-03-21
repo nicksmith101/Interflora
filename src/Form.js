@@ -5,8 +5,8 @@ class Form extends Component {
         super(props);
 
         this.initialState = {
-                guysname: '',
-                job: ''
+                greeting: '',
+                category: ''
         };
 
         this.state = this.initialState;
@@ -25,33 +25,51 @@ class Form extends Component {
         this.setState(this.initialState); // reset form fields to empty
     }
 
-
     render()
     {
-        const {guysname, job} = this.state;
+        const {greeting, category} = this.state;
 
         return(
         
             <form>
-                <label>Name</label>
-                <input
-                    type="text"
-                    name="guysname"
-                    value={guysname}
+                <div className="greetingsarea">
+                    <label>Your Greeting:</label>
+                    <textarea
+                    name="greeting"
+                    value={greeting}
                     onChange={this.handleChange}
                     />
-                <label>Job Title</label>    
-                <input 
-                    type="text"
-                    name="job"
-                    value={job}
-                    onChange={this.handleChange}
-                    />
+                </div>
 
-               <input type="button"
-                    value="Submit"
-                    onClick={this.submitForm}
-                    />
+                <div className="typecatarea">
+                    <label>Type your own Category:</label>
+                    <input
+                        type="text"
+                        name="category"
+                        value={category}
+                        onChange={this.handleChange}
+                        />
+
+                </div>
+
+                <div className="selectcatarea">
+                    <label>Select a Category:</label> 
+
+                    <select value={category} name="category" onChange={this.handleChange}>
+                        <option selected value="type category here">Choose one</option>
+                        <option value="Single Flower">Single Flower</option>
+                        <option value="Bouquet">Bouquet</option>
+                        <option value="Large Bouquet">Large Bouquet</option>
+                        <option value="Enormous Bouquet">Enormous Bouquet</option>
+                    </select> 
+                </div>
+
+                <div className="submitbuttonarea" >
+                    <input className="submitbutton" type="button"
+                                    value="Submit"
+                                    onClick={this.submitForm}
+                                    />
+                </div>
 
             </form>
         )
