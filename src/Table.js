@@ -29,7 +29,7 @@ import React, {Component} from 'react';
             }
         )
 
-    return(<tbody>{rowcontents}</tbody>);
+    return(<div className="tablebody">{rowcontents}</div>);
     }
 
 
@@ -41,7 +41,7 @@ import React, {Component} from 'react';
     
             return (
             <div className="tablearea row">
-                <div className="tableofdata  ">
+                <div className="tableofdata">
                     {/* <TableHeader /> */}
                     <TableBody 
                     entryData={entryData}

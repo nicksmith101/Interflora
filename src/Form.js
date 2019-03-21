@@ -19,7 +19,6 @@ class Form extends Component {
         this.setState( {[name]: value } );
     }
 
-
     submitForm = () => {
         this.props.handleSubmit(this.state); // submit data, using the state of this page
         this.setState(this.initialState); // reset form fields to empty
@@ -56,7 +55,7 @@ class Form extends Component {
                     <label>or Select a Category:</label> 
 
                     <select value={category} name="category" onChange={this.handleChange}>
-                        <option selected value="type category here">Choose one</option>
+                        <option defaultValue value="type category here">Choose one</option>
                         <option value="Birthday">Birthday</option>
                         <option value="Christmas">Christmas</option>
                         <option value="Anniversary">Anniversary</option>

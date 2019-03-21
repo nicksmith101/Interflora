@@ -116,11 +116,15 @@ input[type="text"], select{
   text-align: left;
 }
 
+.tablebody
+{
+  display: table-row-group;
+}
+
 .tablerow
 {
   display: table-row;
   text-align: left;
-
 }
 
 .tablerow .tablecell
@@ -133,14 +137,11 @@ input[type="text"], select{
   border-bottom: 1px solid #efefef;
 }
 
-
 .tablecell
 {
   display: table-cell;
   text-align: left;
   padding: 10px 0;
-  /* border: 1px solid red; */
-
 }
 
 .greeting
@@ -242,18 +243,18 @@ input[type="text"], select{
 
 .deletebutton
 {
-    color: #fff;
-    display: inline-block;
-    font-family: Arial,serif;
-    font-size: 12px;
-    font-weight: 700;
-    height: 35px;
-    letter-spacing: .86px;
-    line-height: 37px;
-    margin: 0;
-    min-width: 100px;
-    padding: 0 20px;
-    width: auto;
+  color: #fff;
+  display: inline-block;
+  font-family: Arial,serif;
+  font-size: 12px;
+  font-weight: 700;
+  height: 35px;
+  letter-spacing: .86px;
+  line-height: 37px;
+  margin: 0;
+  min-width: 100px;
+  padding: 0 20px;
+  width: auto;
 }
 
 .submitbutton:hover,
@@ -262,9 +263,9 @@ input[type="text"], select{
   border: none;
   outline: none;
   background-color: #ebecf7;
-    -moz-box-shadow:    rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
-    -webkit-box-shadow:  rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+  -moz-box-shadow:    rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+  -webkit-box-shadow:  rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
 }
 
 .submitbutton:disabled,
