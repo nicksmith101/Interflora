@@ -53,20 +53,20 @@ class Form extends Component {
                 </div>
 
                 <div className="selectcatarea">
-                    <label>Select a Category:</label> 
+                    <label>or Select a Category:</label> 
 
                     <select value={category} name="category" onChange={this.handleChange}>
                         <option selected value="type category here">Choose one</option>
-                        <option value="Single Flower">Single Flower</option>
-                        <option value="Bouquet">Bouquet</option>
-                        <option value="Large Bouquet">Large Bouquet</option>
-                        <option value="Enormous Bouquet">Enormous Bouquet</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Christmas">Christmas</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Wedding">Wedding</option>
                     </select> 
                 </div>
 
                 <div className="submitbuttonarea" >
-                    <input className="submitbutton" type="button"
-                                    value="Submit"
+                    <input className="submitbutton" type="button" disabled={!(this.state.greeting && this.state.category)}
+                                    value="Save"
                                     onClick={this.submitForm}
                                     />
                 </div>

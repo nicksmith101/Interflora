@@ -13,14 +13,16 @@ class App extends Component{
 
 
     removeEntry = (index) => {
+        
+        const {entries} = this.state
 
-        const {entries} = this.state;
-
-        this.setState({
+        if (window.confirm("Delete this greeting?")) {
+            this.setState({
             entries: entries.filter((entry, i ) => {
                     return i !== index;
                 })
             });
+          }
     }
 
     handleSubmit = (entry) => {
@@ -35,42 +37,42 @@ class App extends Component{
         //const entries = this.state.entries;
         //console.log('entries', entries)
 
-        return (   
+     return (   
 
 
-<div className="container-fluid">
+        <div className="container-fluid">
 
-    <div className="row headercontainer">
-        <div className="siteheader"></div>
-        <div className="siteheaderbg"></div>
-    </div>
+            <div className="row headercontainer">
+                <div className="siteheader"></div>
+                <div className="siteheaderbg"></div>
+            </div>
 
-    <div className="container pagecontent">
+            <div className="container pagecontent">
 
-                <div className="row titlearea">
-                    <h1 className="title">Customise your Order</h1>
+                        <div className="row titlearea">
+                            <h1 className="title">Customise your Order</h1>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-md-8 offset-md-2">
+                                <Form handleSubmit={this.handleSubmit}  />
+                            </div>
+                        <div>
+
+                        <div className="row">
+                            <div className="col-md-8 offset-md-2">
+                                <Table entryData={entries}
+                                        removeEntry={this.removeEntry}
+                                        />
+                            </div>
+                        </div>
+
+                    </div>    
+                    
                 </div>
-
-                <div className="row">
-                    <div className="col-md-8 offset-md-2">
-                        <Form handleSubmit={this.handleSubmit}  />
-                    </div>
-                <div>
-
-                <div className="row">
-                    <div className="col-md-8 offset-md-2">
-                        <Table entryData={entries}
-                                removeEntry={this.removeEntry}
-                                />
-                    </div>
-                </div>
-
-            </div>    
+            </div>
             
         </div>
-    </div>
-    
-</div>
 
         );
 

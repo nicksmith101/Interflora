@@ -68,6 +68,7 @@ form *, select *{
 
 .container{
   background-color: #fff;
+  box-shadow: 0 30px 200px -30px rgba(0,0,0,.2);
 }
   
 .title{
@@ -77,7 +78,7 @@ form *, select *{
 }
 
 label{
-  padding: 10px 0 0 0;
+  padding: 15px 0 5px 0;
   margin: 0;
 }
 
@@ -97,7 +98,7 @@ input[type="text"], select{
 
 .tablearea
 {
-  padding: 0 30px;
+  padding: 0 20px;
   text-align: center;
   /* background-color: pink; */
 }
@@ -137,26 +138,25 @@ input[type="text"], select{
 {
   display: table-cell;
   text-align: left;
-  padding: 10px 15px;
+  padding: 10px 0;
   /* border: 1px solid red; */
 
 }
 
 .greeting
 {
-  width: 70%;
+  width: 65%;
+  color: #9a9a9a;
 }
 
 .greetingsarea
 {
   width: 100%;
-  /* border: 1px solid red; */
 }
 
 .greetingsarea label
 {
   width: 100%;
-  /* border: 1px solid red; */
 }
 
 .greetingsarea textarea
@@ -164,7 +164,6 @@ input[type="text"], select{
   width: 100%;
   border: none;
   height: 100px;
-
   width: 100%;
   height: 100px;
   padding: 8px 15px;
@@ -266,4 +265,16 @@ input[type="text"], select{
     -moz-box-shadow:    rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
     -webkit-box-shadow:  rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px;
+}
+
+.submitbutton:disabled,
+.deletebutton:disabled,
+.submitbutton:hover:disabled,
+.deletebutton:hover:disabled
+ {
+  background-color: #dddddd;
+  color: #fff;
+  -moz-box-shadow:  none;
+  -webkit-box-shadow:  none;
+  box-shadow: none;
 }
