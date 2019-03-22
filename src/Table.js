@@ -1,18 +1,6 @@
 import React, {Component} from 'react';
 
 
-    // const TableHeader = () => {
-    //     return(
-    //         <div className="tableheader">
-    //             <div className="tablerow">
-    //                 <div className="tablecell greeting">Greeting</div>
-    //                 <div className="tablecell category">Category</div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
-
-
     const TableBody = (props) => {
 
         const rowcontents = props.entryData.map( (innerStuff, index) => {
@@ -42,7 +30,7 @@ import React, {Component} from 'react';
             return (
             <div className="tablearea row">
                 <div className="tableofdata">
-                    {/* <TableHeader /> */}
+
                     <TableBody 
                     entryData={entryData}
                     removeEntry={removeEntry}

@@ -41,7 +41,7 @@ class Form extends Component {
                 </div>
 
                 <div className="typecatarea">
-                    <label>Type your own Category:</label>
+                    <label>What's the Occasion:</label>
                     <input
                         type="text"
                         name="category"
@@ -52,7 +52,7 @@ class Form extends Component {
                 </div>
 
                 <div className="selectcatarea">
-                    <label>or Select a Category:</label> 
+                    <label>or Select an Occasion:</label> 
 
                     <select value={category} name="category" onChange={this.handleChange}>
                         <option defaultValue value="type category here">Choose one</option>
